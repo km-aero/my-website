@@ -1,7 +1,7 @@
 export const Paragraph = ({ text }) => {
   return (
     <>
-      <div>
+      <div className='py-2'>
         <p>{text}</p>
       </div>
     </>

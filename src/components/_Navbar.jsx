@@ -13,8 +13,8 @@ const NavLink = ({ href, text }) => {
 export const Navbar = () => {
   return (
     <>
-      <nav className='mx-auto max-w-full relative flex h-16 items-center justify-between'>
-        <ul className='text-slate-300'>
+      <nav className='mx-auto my-4 px-6 py-8 max-w-full relative flex h-16 items-center justify-between bg-slate-300 rounded-3xl rounded-t-lg'>
+        <ul className='text-[#11191f]'>
           <li>
             <strong>Kevin Monteiro - DevOps Engineer</strong>
           </li>
