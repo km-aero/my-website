@@ -7,6 +7,15 @@ type WorkExperience = {
   id: string
 }
 
+type Education = {
+  name: string
+  course: string
+  start: string
+  end: string
+  link: string
+  id: string
+}
+
 type BlogPost = {
   title: string
   description: string
@@ -75,6 +84,25 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: 'Feb 2020',
     link: 'https://www.citco.com/',
     id: 'work7',
+  },
+]
+
+export const EDUCATION: Education[] = [
+  {
+    name: 'Bayes Business School',
+    course: 'MSc Mathematical Trading and Finance',
+    start: '2018',
+    end: '2019',
+    link: 'https://www.bayes.citystgeorges.ac.uk/',
+    id: 'school-1',
+  },
+  {
+    name: 'University of East London',
+    course: 'BSc (Hons) Finance',
+    start: '2015',
+    end: '2018',
+    link: 'https://www.uel.ac.uk/',
+    id: 'school-2',
   },
 ]
 
