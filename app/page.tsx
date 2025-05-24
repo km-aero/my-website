@@ -80,8 +80,13 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
+            Senior DevOps Engineer with over 4 years of experience in cloud
+            infrastructure, automation, Terraform management and Kubernetes. My
+            key achievements include leading a team to develop microservices
+            that process 120,000 applications per month. Seeking a Senior
+            Engineer position, where I bring my cloud infrastructure and
+            automation skills to support building and maintaining the
+            infrastructure that enhances the success of technology teams.
           </p>
         </div>
       </motion.section>
