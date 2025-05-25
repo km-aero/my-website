@@ -1,11 +1,11 @@
 export const metadata = {
-  title: 'Exploring the Intersection of Design, AI, and Design Engineering',
+  title: 'Creating my Personal Website',
   description:
-    'Design and artificial intelligence (AI) are increasingly intertwined, driving innovation across industries. As technology evolves, the role of design engineering is more critical than ever, bridging creativity and functionality.',
+    'As a DevOps Engineer, I realized I had no online footprint and decided to change that by creating a personal website.',
   alternates: {
-    canonical: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+    canonical: '/blog/my-personal-website',
   },
-};
+}
 
 <Cover
   src="https://cdn.cosmos.so/affd4b79-e848-4dfd-bd42-5f2c4a847365?format=jpeg"
@@ -13,98 +13,52 @@ export const metadata = {
   caption="cosmos.com"
 />
 
-# Exploring the Intersection of Design, AI, and Design Engineering
+# My Personal Website
 
-Design and artificial intelligence (AI) are increasingly intertwined, driving innovation across industries. As technology evolves, the role of design engineering is more critical than ever, bridging creativity and functionality.
+I've always felt that real developers and tech people have to have an online footprint, whether that be a personal website or publicly available code in a remote git repository. So far, in my career as a DevOps Engineer (whatever that means today) with the focus on making sure the work I do for my employer and client is top-notch, I have completely neglected myself. I don't have an online footprint! Believing in the phrase it's never too late, I will create and host one in the coming days. This blog will be focused on following what I have done to get this website up, running, and accessible. If you are reading this right now, it will mean I've kept to my word and this is currently hosted on my website somewhere on the wide web which is a massive milestone for me. Thank you for being here with me at the start of my digital footprint!
 
----
+## To build or not to build
 
-## The Evolving Role of AI in Design
+This question is always one of my biggest blockers on the front-end side of the build. I always ask myself, do I design and create my website or do I go with a ready-made template? I've historically always chosen to design and create my websites because I have the skills to do so and would love my website to be unique but I often get blocked on the design. I see myself as creative but indecisive with personal creative tasks and so I tend to start designing a website, essentially get overwhelmed/tired of the design process and become blocked. This made me think that if designing does not fit me at this moment then what are the current best options?
 
-AI is no longer just a backend tool—it’s becoming an active collaborator in the creative process. From generating design ideas to optimizing layouts, AI offers endless possibilities. For instance:
+## Personal website templates
 
-- **Generative Design**: AI algorithms can generate thousands of design variations based on constraints, helping designers explore ideas faster.
-- **User Experience Optimization**: AI analyzes user behavior to suggest improvements, enabling data-driven design decisions.
-- **Automation**: Repetitive tasks like resizing assets or formatting layouts can be automated, freeing up designers for more strategic work.
+My thoughts turned to templates. If there are billions of people in this world surely I am not the only person to have gone through this issue. With that in mind, a smart person must have created a template for those of us who can't design our websites and I was right. People/companies had already created these templates and some charged for it whereas others gave it away for free. In my investigation, I came across these 3 options:
 
-## Challenges and Opportunities
+- [Hugo](https://gohugo.io/)
+- [Webstudio](https://webstudio.is/)
+- [Vercel portfolio starter kit](https://vercel.com/templates/Next.js/nim-minimalist-personal-site)
 
-While AI empowers designers, it also raises challenges:
+### Hugo
 
-### Challenges
+> Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.
 
-- **Ethical Design**: AI systems may unintentionally reinforce biases. Designers must ensure inclusivity and fairness.
-- **Loss of Control**: Relying too heavily on AI can dilute the human touch in design.
-- **Learning Curve**: Integrating AI tools requires new skills, which can be daunting for some designers.
+Hugo seems to be perfect for what I need, nothing more or less which in my mind is a good and a bad thing. It's good because static sites are generally quite easy to create and using one of their themes would make it even easier by avoiding having to make too many choices. The bad thing, I would likely have to replace it if I ever decided to have dynamic assets on the website.
 
-### Opportunities
+### Webstudio
 
-- **Enhanced Creativity**: AI can inspire by offering unconventional ideas.
-- **Efficiency Gains**: Automation allows for rapid iteration and prototyping.
-- **Scalability**: AI enables personalized experiences at scale, a growing demand in today’s market.
+> Webstudio is an open-source website builder that empowers creators to build highly maintainable and fast websites using modern web standards.
 
----
+Webstudio looks very impressive and is a big plus that it is open source and can be self-hosted. The underlying tech behind Webstudio is remix which is a proven JavaScript framework. Seeing as this is a website builder, I would have to host the builder which exports a website that I can then host. I could run the builder locally whenever I want to create a website or make a change to an existing website and only host the outputted website. If further down the line I need to also host the builder, I would have to figure out how to do that myself as it is currently not advised to be hosted in a production setting. Out of the 3 options, the thought of using Webstudio felt like the best option but after further research, its community is growing and not very large yet. This meant there are not currently many templates to use and certainly none that I liked. I would also have to think about a good workflow to get the website hosted from builder to cloud.
 
-## Design Engineering: The Glue Between Creativity and Execution
+### Nim: Minimalist portfolio site
 
-Design engineering ensures that the gap between creative vision and technical execution is seamless. It combines the artistry of design with the precision of engineering.
+> Nim is a free and open-source personal website template built with Next.js 15, React 19, Tailwind CSS v4, and Motion. Designed for developers, designers, and founders, it combines minimalism with delightful animated components powered by [Motion-Primitives](https://motion-primitives.com/).
 
-### Key Principles of Design Engineering
+This option is essentially a next js app deployed in vercel. I like the look of this starter kit as it allows me to get started very quickly with a template. This example has a minimalist design, a front page where I can write a simple about me, and a blog section for this to go into. The front page also has space for all the information you would usually put on your CV. Although some design decisions would need to be made to add these sections, I could do it over time as the website would have been hosted and the main design decisions are already made.
 
-1. **Systems Thinking**: Viewing a design holistically ensures all components work together cohesively.
-2. **Collaboration**: Effective communication between designers and developers is crucial for successful outcomes.
-3. **Iterative Process**: Building, testing, and refining are fundamental to achieving the best results.
+## 'Installing' nim
 
-> "Good design is as little design as possible." — Dieter Rams
+After deciding to use Nim, I got busy cloning it and making the updates required to make it mine. This project uses `npm` and so after cloning I chose to use node version `24.1.0` and then run `npm install` to install all it's dependencies.
 
-### Tools of the Trade
+### Personalising the website
 
-Modern design engineers leverage tools like:
+Now to personalise it to myself. I removed the projects sections and added education and certification sections. I made sure to update the name and role on the header section. The last update needed was the website title and to add a short sentence about myself. I do also need to add a picture of myself and a link to download my cv but that can be done at a later date as it requires more than just front end updates.
 
-- **Figma** and **Sketch** for prototyping
-- **Motion** for creating smooth animations
-- **Tailwind CSS** for streamlined styling
-- **Git** for version control and collaboration
+## Hosting the website
 
----
+Now that the website is ready to be published, I need somewhere to host it. One of my motives for creating this website is also to showcase my DevOps skills so I plan to use infrastructure as code (IaC) to host this website as cheaply as possible. The website and its IaC repository live on GitHub. I plan to use OpenTofu to deploy the website to Vercel. The state for OpenTofu will live in AWS S3. To do this, I first set up the project for OpenTofu using their [documentation](https://search.opentofu.org/provider/vercel/vercel/latest) for vercel. An API token is needed so, I created a Vercel account and pulled out the API key and set it as a GitHub action secret. Using OpenTofu to deploy an app to Vercel is super simple. All that is needed is for a project to be declared with a reference to the framework of the website and where the website repository lives. Vercel then automatically tracks any changes made to the website's main branch and pulls and deploys it to production. Some manual work was required as I wanted to have a custom domain that represented me so I bought [kbmm.cloud](kbmm.cloud) from hostinger.com. I had to add an A record and a CNAME record so that the domain was able to be used on Vercel and then I used OpenTofu to declare the custom domain in Vercel so that it could be used. At this point, everything was set and all I had to test was whether Vercel correctly deployed the website. This was achievable by doing an empty commit on the website repository and voila, we are live!
 
-## AI and Design Engineering: A Symbiotic Relationship
+Thanks again for going on this adventure with me!
 
-The integration of AI into design engineering creates powerful synergies:
-
-- **Prototyping with AI**: AI-driven tools like ChatGPT assist in generating content for prototypes, accelerating the design process.
-- **Predictive Analytics**: Engineers use AI to predict performance issues and optimize designs in real-time.
-- **Accessibility Improvements**: AI tools automatically detect and fix accessibility concerns, ensuring compliance.
-
-### Case Study: Motion-Primitives
-
-Motion-Primitives demonstrates how AI and design engineering come together. By leveraging Framer Motion and Tailwind CSS, it simplifies the creation of dynamic, responsive interfaces. AI can enhance this by:
-
-- Generating motion patterns based on user preferences.
-- Optimizing performance for different devices.
-- Automating testing for cross-browser compatibility.
-
----
-
-## Conclusion
-
-The intersection of AI, design, and design engineering is reshaping the industry. By embracing AI while staying grounded in design principles, professionals can push boundaries and create experiences that are both innovative and human-centered. The future lies in collaboration—not only between humans and machines but also among designers, engineers, and AI.
-
----
-
-### Questions for Reflection
-
-- How can we ensure AI remains a tool for empowerment rather than replacement?
-- What steps can design engineers take to integrate AI responsibly into their workflows?
-
-### Further Reading
-
-- [Designing for AI](https://example.com/designing-for-ai)
-- [The Future of Design Systems](https://example.com/future-design-systems)
-- [Ethical AI Guidelines](https://example.com/ethical-ai)
-
----
-
-### Music for Inspiration
-
-Listening to music while working? Check out _"Motion"_ by Tycho—a perfect blend of creativity and rhythm.
+Uploaded: 26th May 2025
