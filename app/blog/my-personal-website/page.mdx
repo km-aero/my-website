@@ -8,12 +8,14 @@ export const metadata = {
 }
 
 <Cover
-  src="https://cdn.cosmos.so/affd4b79-e848-4dfd-bd42-5f2c4a847365?format=jpeg"
-  alt="Image from the movie Alien - from cosmos.com"
-  caption="cosmos.com"
+  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  alt="3D render - from unsplash.com"
+  caption="Glenn Carstens-Peters"
 />
 
 # My Personal Website
+
+<small>26th May 2025</small>
 
 I've always felt that real developers and tech people have to have an online footprint, whether that be a personal website or publicly available code in a remote git repository. So far, in my career as a DevOps Engineer (whatever that means today) with the focus on making sure the work I do for my employer and client is top-notch, I have completely neglected myself. I don't have an online footprint! Believing in the phrase it's never too late, I will create and host one in the coming days. This blog will be focused on following what I have done to get this website up, running, and accessible. If you are reading this right now, it will mean I've kept to my word and this is currently hosted on my website somewhere on the wide web which is a massive milestone for me. Thank you for being here with me at the start of my digital footprint!
 
@@ -29,19 +31,19 @@ My thoughts turned to templates. If there are billions of people in this world s
 - [Webstudio](https://webstudio.is/)
 - [Vercel portfolio starter kit](https://vercel.com/templates/Next.js/nim-minimalist-personal-site)
 
-### Hugo
+### Hugo <img src="https://gohugo.io/images/hugo-logo-wide.svg" alt="Hugo JS"/>
 
 > Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.
 
 Hugo seems to be perfect for what I need, nothing more or less which in my mind is a good and a bad thing. It's good because static sites are generally quite easy to create and using one of their themes would make it even easier by avoiding having to make too many choices. The bad thing, I would likely have to replace it if I ever decided to have dynamic assets on the website.
 
-### Webstudio
+### Webstudio <img src="https://docs.webstudio.is/~gitbook/image?url=https%3A%2F%2F330243581-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FTep4EGj6hSC54ozHujyK%252Flogo%252FqGKcqvxboJxEW15PdeKA%252Flogo%2520%285%29.png%3Falt%3Dmedia%26token%3Db89c1f01-c6cb-489d-86f1-b6e1a2615661&width=260&dpr=1&quality=100&sign=53d1bb5b&sv=2" alt="Webstudio"/>
 
 > Webstudio is an open-source website builder that empowers creators to build highly maintainable and fast websites using modern web standards.
 
 Webstudio looks very impressive and is a big plus that it is open source and can be self-hosted. The underlying tech behind Webstudio is remix which is a proven JavaScript framework. Seeing as this is a website builder, I would have to host the builder which exports a website that I can then host. I could run the builder locally whenever I want to create a website or make a change to an existing website and only host the outputted website. If further down the line I need to also host the builder, I would have to figure out how to do that myself as it is currently not advised to be hosted in a production setting. Out of the 3 options, the thought of using Webstudio felt like the best option but after further research, its community is growing and not very large yet. This meant there are not currently many templates to use and certainly none that I liked. I would also have to think about a good workflow to get the website hosted from builder to cloud.
 
-### Nim: Minimalist portfolio site
+### Nim: Minimalist portfolio site <img src="https://vercel.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F5MJaI2adLMwJR3WeOpgPyC%2F604994f6aec50c1a0362fe4326a6cf22%2Fcover.jpg&w=1920&q=75" alt="Nim Template" />
 
 > Nim is a free and open-source personal website template built with Next.js 15, React 19, Tailwind CSS v4, and Motion. Designed for developers, designers, and founders, it combines minimalism with delightful animated components powered by [Motion-Primitives](https://motion-primitives.com/).
 
@@ -57,8 +59,10 @@ Now to personalise it to myself. I removed the projects sections and added educa
 
 ## Hosting the website
 
-Now that the website is ready to be published, I need somewhere to host it. One of my motives for creating this website is also to showcase my DevOps skills so I plan to use infrastructure as code (IaC) to host this website as cheaply as possible. The website and its IaC repository live on GitHub. I plan to use OpenTofu to deploy the website to Vercel. The state for OpenTofu will live in AWS S3. To do this, I first set up the project for OpenTofu using their [documentation](https://search.opentofu.org/provider/vercel/vercel/latest) for vercel. An API token is needed so, I created a Vercel account and pulled out the API key and set it as a GitHub action secret. Using OpenTofu to deploy an app to Vercel is super simple. All that is needed is for a project to be declared with a reference to the framework of the website and where the website repository lives. Vercel then automatically tracks any changes made to the website's main branch and pulls and deploys it to production. Some manual work was required as I wanted to have a custom domain that represented me so I bought [kbmm.cloud](kbmm.cloud) from hostinger.com. I had to add an A record and a CNAME record so that the domain was able to be used on Vercel and then I used OpenTofu to declare the custom domain in Vercel so that it could be used. At this point, everything was set and all I had to test was whether Vercel correctly deployed the website. This was achievable by doing an empty commit on the website repository and voila, we are live!
+Now that the website is ready to be published, I need somewhere to host it. One of my motives for creating this website is also to showcase my DevOps skills so I plan to use infrastructure as code (IaC) to host this website as cheaply as possible. The website and it's IaC repository live on GitHub.
 
-Thanks again for going on this adventure with me!
+I plan to use OpenTofu to deploy the website to Vercel. The state for OpenTofu will live in AWS S3. To do this, I first set up the project for OpenTofu using the [documentation](https://search.opentofu.org/provider/vercel/vercel/latest) for vercel. An API token is needed, so I created a Vercel account and retrieved the API key to set it as a GitHub action secret. Using OpenTofu to deploy an app to Vercel is super simple. All that is needed is for a project to be declared with a reference to the framework of the website and where the website repository lives. Vercel then automatically tracks any changes made to the website's main branch and pulls and deploys it to production. Some manual work was required as I wanted to have a custom domain that represented me so I bought [kbmm.cloud](kbmm.cloud) from hostinger.com. I added an A record and a CNAME record in Hostinger, so that the domain was able to be used on Vercel and then I used OpenTofu to declare the custom domain in Vercel so that it could be used.
 
-Uploaded: 26th May 2025
+At this point, everything was set and all I had to test was whether Vercel correctly deployed the website. This was achievable by doing an empty commit on the website repository and voila, we are live!
+
+Thanks for going on this short adventure with me!
