@@ -159,16 +159,6 @@ export const CERTIFICATES: Certification[] = [
   },
 ]
 
-export const BLOG_POSTS: BlogPost[] = [
-  {
-    title: 'Creating and hosting my personal website',
-    description:
-      'How I started my online presence by using a vercel starter next js app.',
-    link: '/blog/my-personal-website',
-    uid: 'blog-1',
-  },
-]
-
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Github',
