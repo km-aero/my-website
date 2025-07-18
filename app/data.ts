@@ -24,13 +24,6 @@ type Certification = {
   id: string
 }
 
-type BlogPost = {
-  title: string
-  description: string
-  link: string
-  uid: string
-}
-
 type SocialLink = {
   label: string
   link: string
@@ -47,7 +40,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
   {
     company: 'Capgemini Invent',
-    title: 'Technical Lead',
+    title: 'Tech Lead',
     start: 'May 2023',
     end: 'Oct 2024',
     link: 'https://www.capgemini.com/au-en/about-us/who-we-are/our-brands/capgemini-invent/',
@@ -55,19 +48,11 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
   {
     company: 'Capgemini Invent',
-    title: 'Lead DevOps Engineer',
-    start: 'Nov 2022',
+    title: 'DevOps Engineer',
+    start: 'Apr 2022',
     end: 'May 2023',
     link: 'https://www.capgemini.com/au-en/about-us/who-we-are/our-brands/capgemini-invent/',
     id: 'work3',
-  },
-  {
-    company: 'Capgemini Invent',
-    title: 'DevOps Engineer',
-    start: 'Apr 2022',
-    end: 'Nov 2023',
-    link: 'https://www.capgemini.com/au-en/about-us/who-we-are/our-brands/capgemini-invent/',
-    id: 'work4',
   },
   {
     company: 'Sparta Global',
@@ -75,7 +60,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start: 'Oct 2020',
     end: 'Apr 2023',
     link: 'https://www.spartaglobal.com/',
-    id: 'work5',
+    id: 'work4',
   },
   {
     company: 'Sparta Global',
@@ -83,7 +68,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start: 'Feb 2020',
     end: 'Oct 2020',
     link: 'https://www.spartaglobal.com/',
-    id: 'work6',
+    id: 'work5',
   },
   {
     company: 'Citco',
@@ -91,7 +76,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start: 'Sep 2019',
     end: 'Feb 2020',
     link: 'https://www.citco.com/',
-    id: 'work7',
+    id: 'work6',
   },
 ]
 
