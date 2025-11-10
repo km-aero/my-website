@@ -32,7 +32,7 @@ type SocialLink = {
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'Capgemini Invent',
-    title: 'Senior DevOps Engineer',
+    title: 'Senior DevOps Engineer (Senior Consultant)',
     start: 'Oct 2025',
     end: 'Present',
     link: 'https://www.capgemini.com/au-en/about-us/who-we-are/our-brands/capgemini-invent/',
@@ -40,7 +40,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
   {
     company: 'Capgemini Invent',
-    title: 'Platform Engineer',
+    title: 'Senior Platform Engineer (Senior Consultant)',
     start: 'Oct 2024',
     end: 'Oct 2025',
     link: 'https://www.capgemini.com/au-en/about-us/who-we-are/our-brands/capgemini-invent/',
@@ -48,7 +48,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
   {
     company: 'Capgemini Invent',
-    title: 'Tech Lead',
+    title: 'Technical Lead (Senior Consultant)',
     start: 'May 2023',
     end: 'Oct 2024',
     link: 'https://www.capgemini.com/au-en/about-us/who-we-are/our-brands/capgemini-invent/',
@@ -56,7 +56,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
   {
     company: 'Capgemini Invent',
-    title: 'DevOps Engineer',
+    title: 'DevOps Engineer (Consultant)',
     start: 'Apr 2022',
     end: 'May 2023',
     link: 'https://www.capgemini.com/au-en/about-us/who-we-are/our-brands/capgemini-invent/',
