@@ -32,11 +32,19 @@ type SocialLink = {
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'Capgemini Invent',
-    title: 'Platform Engineer',
-    start: 'Oct 2024',
+    title: 'Senior DevOps Engineer',
+    start: 'Oct 2025',
     end: 'Present',
     link: 'https://www.capgemini.com/au-en/about-us/who-we-are/our-brands/capgemini-invent/',
     id: 'work1',
+  },
+  {
+    company: 'Capgemini Invent',
+    title: 'Platform Engineer',
+    start: 'Oct 2024',
+    end: 'Oct 2025',
+    link: 'https://www.capgemini.com/au-en/about-us/who-we-are/our-brands/capgemini-invent/',
+    id: 'work2',
   },
   {
     company: 'Capgemini Invent',
@@ -44,7 +52,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start: 'May 2023',
     end: 'Oct 2024',
     link: 'https://www.capgemini.com/au-en/about-us/who-we-are/our-brands/capgemini-invent/',
-    id: 'work2',
+    id: 'work3',
   },
   {
     company: 'Capgemini Invent',
@@ -52,7 +60,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start: 'Apr 2022',
     end: 'May 2023',
     link: 'https://www.capgemini.com/au-en/about-us/who-we-are/our-brands/capgemini-invent/',
-    id: 'work3',
+    id: 'work4',
   },
   {
     company: 'Sparta Global',
@@ -60,7 +68,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start: 'Oct 2020',
     end: 'Apr 2023',
     link: 'https://www.spartaglobal.com/',
-    id: 'work4',
+    id: 'work5',
   },
   {
     company: 'Sparta Global',
@@ -68,7 +76,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start: 'Feb 2020',
     end: 'Oct 2020',
     link: 'https://www.spartaglobal.com/',
-    id: 'work5',
+    id: 'work6',
   },
   {
     company: 'Citco',
@@ -76,7 +84,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start: 'Sep 2019',
     end: 'Feb 2020',
     link: 'https://www.citco.com/',
-    id: 'work6',
+    id: 'work7',
   },
 ]
 
