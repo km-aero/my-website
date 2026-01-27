@@ -35,6 +35,12 @@ export function Magnetic({
   const springY = useSpring(y, springOptions)
 
   useEffect(() => {
+    if (!isHovered) {
+      x.set(0)
+      y.set(0)
+      return
+    }
+
     const calculateDistance = (e: MouseEvent) => {
       if (ref.current) {
         const rect = ref.current.getBoundingClientRect()
