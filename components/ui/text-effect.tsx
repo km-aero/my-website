@@ -224,42 +224,53 @@ export function TextEffect({
   const segments = splitText(children, per)
   const MotionTag = motion[as as keyof typeof motion] as typeof motion.div
 
-  const baseVariants = preset
-    ? presetVariants[preset]
-    : { container: defaultContainerVariants, item: defaultItemVariants }
+  const computedVariants = React.useMemo(() => {
+    const baseVariants = preset
+      ? presetVariants[preset]
+      : { container: defaultContainerVariants, item: defaultItemVariants }
 
-  const stagger = defaultStaggerTimes[per] / speedReveal
+    const stagger = defaultStaggerTimes[per] / speedReveal
 
-  const baseDuration = 0.3 / speedSegment
+    const baseDuration = 0.3 / speedSegment
 
-  const customStagger = hasTransition(variants?.container?.visible ?? {})
-    ? (variants?.container?.visible as TargetAndTransition).transition
-        ?.staggerChildren
-    : undefined
+    const customStagger = hasTransition(variants?.container?.visible ?? {})
+      ? (variants?.container?.visible as TargetAndTransition).transition
+          ?.staggerChildren
+      : undefined
 
-  const customDelay = hasTransition(variants?.container?.visible ?? {})
-    ? (variants?.container?.visible as TargetAndTransition).transition
-        ?.delayChildren
-    : undefined
+    const customDelay = hasTransition(variants?.container?.visible ?? {})
+      ? (variants?.container?.visible as TargetAndTransition).transition
+          ?.delayChildren
+      : undefined
 
-  const computedVariants = {
-    container: createVariantsWithTransition(
-      variants?.container || baseVariants.container,
-      {
-        staggerChildren: customStagger ?? stagger,
-        delayChildren: customDelay ?? delay,
-        ...containerTransition,
-        exit: {
+    return {
+      container: createVariantsWithTransition(
+        variants?.container || baseVariants.container,
+        {
           staggerChildren: customStagger ?? stagger,
-          staggerDirection: -1,
+          delayChildren: customDelay ?? delay,
+          ...containerTransition,
+          exit: {
+            staggerChildren: customStagger ?? stagger,
+            staggerDirection: -1,
+          },
         },
-      },
-    ),
-    item: createVariantsWithTransition(variants?.item || baseVariants.item, {
-      duration: baseDuration,
-      ...segmentTransition,
-    }),
-  }
+      ),
+      item: createVariantsWithTransition(variants?.item || baseVariants.item, {
+        duration: baseDuration,
+        ...segmentTransition,
+      }),
+    }
+  }, [
+    preset,
+    per,
+    speedReveal,
+    speedSegment,
+    variants,
+    delay,
+    containerTransition,
+    segmentTransition,
+  ])
 
   return (
     <AnimatePresence mode="popLayout">
