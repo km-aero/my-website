@@ -1,6 +1,6 @@
 # My personal website
 
-This is a Next.js application based on the [nim template](https://github.com/ibelick/nim). The goal of this website is to have a central space for everything me. Currently this includes a summarised CV, and a blog.
+This is a Next.js application based on the [nim template](https://github.com/ibelick/nim). The goal of this website is to have a central space for everything me. Currently this includes a summarised CV.
 
 ## Requirements
 
